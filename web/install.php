@@ -8,7 +8,7 @@
     <h1>Instalación Contactos</h1>
     <?php
       require_once "../config.php";
-      $pdo = new PDO("pgsql:host={$host};{$port};dbname={$dbname}",$user,$pass);
+      $pdo = new PDO("pgsql:host={$host};port={$port};dbname={$dbname}",$user,$pass);
 
       // $sql = "create database $dbname; use $dbname;";
       // $pdo->exec($sql);
