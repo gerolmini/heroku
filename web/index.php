@@ -10,9 +10,9 @@
   <table>
     <?php
     require_once "../config.php";
-    $pdo = new PDO("mysql:host={$host};port={$port};dbname={$dbname}", $user,$pass);
+    $pdo = new PDO("pgsql:host={$host};port={$port};dbname={$dbname}", $user,$pass);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    
+
     $sql = "select * from contacto;";
     $res = $pdo->query($sql);
     foreach ($res as $fila) {
